@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar estudiante</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <center>
+        <div class="card">
+            <div class="card-header">
+                <h1>Agregar Estudiante</h1>
+            </div>
+            <div class="card-body">
+                <form action="/addStudent" method="POST">
+                    <% //Creamos un form %>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required><br/><br/>
+                    <label for="edad">Edad</label>
+                    <input type="text" id="edad" name="edad" required><br/><br/>
+                    <label for="tpSangre">Tipo de sangre</label>
+                    <input type="text" id="tpSangre" name="tpSangre" required><br/><br/>
+                    <label for="nss">Nss</label>
+                    <input type="text" id="nss" name="nss" required><br/><br/>
+                    
+                    <input type="submit" value="Agregar" class="agregar-btn">
+                </form>
+            </div>            
+        </div>
+    </center>
+</body>
+</html>

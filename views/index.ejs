@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css"/>
+    <title>Personas</title>
+</head>
+<body>
+  <center>
+    <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Tipo de sangre</th>
+            <th>Nss</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% //Mostramos la informacion usando un for  %>
+            <% for (let i = 0; i < data.length; i++) { %>
+                <tr>
+                    <td><%=data[i].Nombre%></td>
+                    <td><%=data[i].Edad%></td>
+                    <td><%=data[i].TpSangre%></td>
+                    <td><%=data[i].Nss%></td>
+                    <td><a class="editar-btn" href="<%= `findById/${data[i].id}` %>">Modificar</a></td>
+                    <td><a class="eliminar-btn" href="<%= `deletePerson/${data[i].id}` %>">Eliminar</a></td>
+                  </tr>
+            <% } %>            
+        </tbody>
+    </table>
+    <br>
+    <a class="agregar-btn" href="/student">Agregar</a>
+  </center>
+</body>
+</html>

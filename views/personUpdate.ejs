@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar estudiante</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <center>
+        <div class="card">
+            <div class="card-header">
+                <h1>Modificar Estudiante</h1>
+            </div>
+            <div class="card-body">
+                <form action="/updatePerson" method="POST">
+                    <% //Creamos un form %>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" value="<%= `${myPerson.Nombre}`%>" required><br>
+                    <label for="edad">Edad</label>
+                    <input type="text" id="edad" name="edad" value="<%= `${myPerson.Edad}`%>" required><br>
+                    <label for="tpSangre">Tipo de sangre</label>
+                    <input type="text" id="tpSangre" name="tpSangre" value="<%= `${myPerson.TpSangre}`%>"required><br>
+                    <label for="nss">Nss</label>
+                    <input type="text" id="nss" name="nss" value="<%= `${myPerson.Nss}`%>" required><br>
+                    <label for="objId">ID:</label>
+                    <input type="text" class="readonly" id="objId" name="objId" value="<%= `${myPerson._id}`%>" readonly><br>  
+                    <input type="submit" value="Modificar" class="agregar-btn">
+                </form>
+            </div>            
+        </div>
+    </center>
+</body>
+</html>
